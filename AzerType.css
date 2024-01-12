@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4, p {font-family : Roboto;}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+
+}
+
+header {
+    color: white;
+    height: 75px;
+    border-bottom: solid 2px #C5C6C7;
+    text-align: center;
+}
+
+.timer {
+    margin: 20px;
+    color: white;
+    height: 10%;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+}
+
+.container {
+    margin: 50px;
+    background: none;
+width: 75%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border: solid 1px white;
+border-radius: 15px;
+}
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px) ;
+}
+
+
+
+.prompt {
+    color: #727272;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: none;
+    padding-top: 10px;
+}
+
+.correct {color: white;}
+
+.word {display: flex;
+flex-direction: row;
+width: auto;
+margin: 1px;}
+
+.letter {
+text-align: center;
+padding: 1px;
+margin: 2px;
+width: 21px;
+} 
+
+.current {
+    animation: blinker 1s linear infinite;
+    background: white;
+    color: black;
+    width: 21px;
+}
+
+.false {
+    color :red;
+    text-decoration: underline;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+pre {
+    font-size: x-large;
+    font-family: Roboto;
+}
+
+.option {display:  flex;
+justify-content: space-around;
+padding :15px;
+color : white;
+font-family : Roboto;
+width: 100%;
+border-top : solid lightgrey 1px;}
+
+button {
+    background: none;
+    color : #C5C6C7;
+    border :  solid 1px #C5C6C7;
+    padding: 5px;
+    border-radius : 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-top: solid 2px #C5C6C7;
+    flex-grow: 1;
+    color: white;
+}
+
+
+.shake {
+    animation: shaking 0.25s;
+}
+
+@keyframes shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+
+   .result {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: center;
+   }
